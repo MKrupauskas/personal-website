@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import { rhythm, scale } from '../utils/typography'
 
-const Header = ({ location, title }) => {
+const HeaderTitle = ({ location, title }) => {
   const rootPath = `${__PATH_PREFIX__}/`
 
   if (location.pathname === rootPath) {
@@ -11,8 +11,8 @@ const Header = ({ location, title }) => {
       <h1
         style={{
           ...scale(1.5),
-          marginBottom: rhythm(1.5),
           marginTop: 0,
+          marginBottom: 0,
         }}
       >
         <Link
@@ -21,7 +21,7 @@ const Header = ({ location, title }) => {
             textDecoration: `none`,
             color: `inherit`,
           }}
-          to={`projects`}
+          to="/"
         >
           {title}
         </Link>
@@ -34,6 +34,7 @@ const Header = ({ location, title }) => {
       style={{
         fontFamily: `Montserrat, sans-serif`,
         marginTop: 0,
+        marginBottom: 0,
       }}
     >
       <Link
@@ -42,11 +43,32 @@ const Header = ({ location, title }) => {
           textDecoration: `none`,
           color: `inherit`,
         }}
-        to={`/`}
+        to="/"
       >
         {title}
       </Link>
     </h3>
+  )
+}
+
+const Header = ({ location, title }) => {
+  return (
+    <header style={{ marginBottom: rhythm(2) }}>
+      <HeaderTitle location={location} title={title} />
+      <span>
+        <Link style={{ boxShadow: 'none' }} to="/about">
+          About
+        </Link>
+        {' • '}
+        <Link style={{ boxShadow: 'none' }} to="/projects">
+          Projects
+        </Link>
+        {' • '}
+        <Link style={{ boxShadow: 'none' }} to="/contact">
+          Contact
+        </Link>
+      </span>
+    </header>
   )
 }
 

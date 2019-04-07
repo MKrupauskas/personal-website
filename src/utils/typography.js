@@ -9,6 +9,9 @@ Wordpress2016.overrideThemeStyles = () => {
     a: {
       color: '#b58900',
     },
+    'a:hover,a:active': {
+      color: '#d3a000',
+    },
   }
 }
 

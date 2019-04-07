@@ -20,7 +20,9 @@ const Footer = () => (
           >
             {social.map(item => (
               <li key={item.name} style={{ marginRight: rhythm(1 / 2) }}>
-                <a href={item.link}>{item.name}</a>
+                <a target="_blank" rel="noopener noreferrer" href={item.link}>
+                  {item.name}
+                </a>
               </li>
             ))}
           </ul>

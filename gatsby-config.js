@@ -3,19 +3,19 @@ module.exports = {
     title: `MKrup`,
     author: `Mykolas Krupauskas`,
     description: `The personal website and blog of Mykolas Krupauskas`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://pedantic-galileo-18375c.netlify.com/`,
     social: [
       {
         name: `Twitter`,
-        link: `mkrupauskas`,
+        link: `https://twitter.com/mykolaskrup`,
       },
       {
         name: `LinkedIn`,
-        link: `mkrupauskas`,
+        link: `https://www.linkedin.com/in/mkrup/`,
       },
       {
         name: `GitHub`,
-        link: `mkrupauskas`,
+        link: `https://github.com/mkrupauskas`,
       },
     ],
   },

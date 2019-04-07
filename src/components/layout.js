@@ -18,9 +18,7 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <header>
-          <Header location={location} title={title} />
-        </header>
+        <Header location={location} title={title} />
         <main>{children}</main>
         <Footer />
       </div>
