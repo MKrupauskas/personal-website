@@ -5,6 +5,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Project from '../components/project'
 
+import { rhythm } from '../utils/typography'
+
 const ProjectPage = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
@@ -14,9 +16,11 @@ const ProjectPage = props => {
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Projects" />
       <h1>Projects</h1>
-      {projects.map(project => (
-        <Project key={project.id} project={project} />
-      ))}
+      <div style={{ marginBottom: rhythm(1) }}>
+        {projects.map((project, index) => (
+          <Project key={index} project={project} />
+        ))}
+      </div>
     </Layout>
   )
 }
@@ -30,16 +34,20 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/(projects)/" } }) {
+    allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/(projects)/" } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
-          id
           frontmatter {
             title
-            date
+            description
+            link
+            tech
             image {
               childImageSharp {
-                fixed(width: 200, height: 200) {
+                fixed(width: 200) {
                   ...GatsbyImageSharpFixed
                 }
               }

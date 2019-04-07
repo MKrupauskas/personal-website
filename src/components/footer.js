@@ -10,7 +10,7 @@ const Footer = () => (
       const { author, social } = data.site.siteMetadata
 
       return (
-        <footer>
+        <footer style={{ marginTop: rhythm(1) }}>
           <ul
             style={{
               display: 'flex',
