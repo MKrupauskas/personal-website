@@ -1,13 +1,15 @@
 import Typography from 'typography'
 import Wordpress2016 from 'typography-theme-wordpress-2016'
 
+export const BRAND_COLOR = '#b58900'
+
 Wordpress2016.overrideThemeStyles = () => {
   return {
     'a.gatsby-resp-image-link': {
       boxShadow: `none`,
     },
     a: {
-      color: '#b58900',
+      color: BRAND_COLOR,
     },
     'a:hover,a:active': {
       color: '#d3a000',

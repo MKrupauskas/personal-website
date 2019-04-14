@@ -55,7 +55,7 @@ const Header = ({ location, title }) => {
   return (
     <header style={{ marginBottom: rhythm(2) }}>
       <HeaderTitle location={location} title={title} />
-      <span>
+      <nav>
         <Link style={{ boxShadow: 'none' }} to="/about">
           About
         </Link>
@@ -67,7 +67,7 @@ const Header = ({ location, title }) => {
         <Link style={{ boxShadow: 'none' }} to="/contact">
           Contact
         </Link>
-      </span>
+      </nav>
     </header>
   )
 }
