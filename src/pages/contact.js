@@ -34,7 +34,12 @@ const Contact = props => {
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Contact" />
       <h1>Contact</h1>
-      <form name="contact" method="post" data-netlify="true">
+      <form
+        name="contact"
+        method="post"
+        data-netlify="true"
+        data-netlify-recaptcha="true"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label style={styles.label}>Email</label>
@@ -44,6 +49,7 @@ const Contact = props => {
           <label style={styles.label}>Message</label>
           <textarea style={styles.textarea} name="message" required />
         </div>
+        <div data-netlify-recaptcha="true" />
         <div>
           <Button type="submit">Send</Button>
         </div>
