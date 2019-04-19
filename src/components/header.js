@@ -56,8 +56,8 @@ const Header = ({ location, title }) => {
     <header style={{ marginBottom: rhythm(2) }}>
       <HeaderTitle location={location} title={title} />
       <nav>
-        <Link style={{ boxShadow: 'none' }} to="/about">
-          About
+        <Link style={{ boxShadow: 'none' }} to="/">
+          Blog
         </Link>
         {' • '}
         <Link style={{ boxShadow: 'none' }} to="/projects">
