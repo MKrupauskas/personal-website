@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
+import { navigateTo } from 'gatsby-link'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Button from '../components/button'
 
 import { rhythm } from '../utils/typography'
+
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
 const inputStyles = {
   maxWidth: 300,
@@ -30,6 +37,24 @@ const Contact = props => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
+  const [fields, setFields] = useState({})
+
+  const handleChange = ({ target }) => {
+    setFields({ ...fields, [target.name]: target.value })
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...fields }),
+    })
+      .then(() => navigateTo('/'))
+      .catch(error => alert(error))
+  }
+
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Contact" />
@@ -38,18 +63,27 @@ const Contact = props => {
         name="contact"
         method="post"
         data-netlify="true"
-        data-netlify-recaptcha="true"
+        onSubmit={handleSubmit}
       >
-        <input type="hidden" name="form-name" value="contact" />
         <div>
           <label style={styles.label}>Email</label>
-          <input style={inputStyles} type="email" name="email" required />
+          <input
+            style={inputStyles}
+            type="email"
+            name="email"
+            required
+            onChange={handleChange}
+          />
         </div>
         <div>
           <label style={styles.label}>Message</label>
-          <textarea style={styles.textarea} name="message" required />
+          <textarea
+            style={styles.textarea}
+            name="message"
+            required
+            onChange={handleChange}
+          />
         </div>
-        <div data-netlify-recaptcha="true" />
         <div>
           <Button type="submit">Send</Button>
         </div>
