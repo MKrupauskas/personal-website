@@ -1,21 +1,21 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+title: Hello World!
+date: '2019-05-17T07:38:38.151Z'
+description: A short introduction about me and this blog. Outlining what this blog is about and what I hope it will become sometime in the future.
 ---
 
-This is my first post on my new fake blog! How exciting!
+It's just fitting to start off my personal blog about software development with the most iconic phrase in the whole industry - Hello World!
 
-I'm sure I'll write a lot more interesting things in the future.
+It's just a shame that: 🤷‍😅
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">the world never says hello back</p>&mdash; Computer Facts (@computerfact) <a href="https://twitter.com/computerfact/status/930555503821905921?ref_src=twsrc%5Etfw">November 14, 2017</a></blockquote>
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+</br>
 
-![Chinese Salty Egg](./salty_egg.jpg)
+Anyways, I'm glad you stumbled upon this site.
+
+My name's Mykolas and I'm a software developer from Vilnius, Lithuania.
+
+This is where I hope to share my insights and thoughts about technology and development in general. Hopefully, the content is fun and useful. 🤞
+
+Stay tuned!
