@@ -53,7 +53,7 @@ He also coined the term **_egoprogrammophobia_**. It is the fear of your own cod
 
 Running, training and retraining machine learning prediction algorithms is possible in the browser. Are there any practical applications? Definitely! [@devdevcharlie](https://twitter.com/devdevcharlie) showed that you can totally detect _willies_ with JavaScript. 😁
 
-Javascript classes have some weird behavior. You can just use functions to make your life a little easier. [@soyguijarro](https://twitter.com/soyguijarro)
+JavaScript classes have some weird behavior. You can just use functions to make your life a little easier. [@soyguijarro](https://twitter.com/soyguijarro)
 
 There are so many different things you can do with the browser like connect and use midi controllers, talk with microcontrollers (that run JavaScript) over the web Bluetooth API or even have interactive and social VR experiences. [@dashersw](https://twitter.com/dashersw) [@html5test](https://twitter.com/html5test) [@misslivirose](https://twitter.com/misslivirose)
 
