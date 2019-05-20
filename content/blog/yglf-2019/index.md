@@ -23,7 +23,7 @@ We were reminded that we develop for the _world wide web_ and not the _wealthy w
 
 To recap just make sure you use the `lang` attribute, specify the exact language of the content and that your font families have the glyphs of the characters you are using on your site.
 
-[@aardrian](https://twitter.com/aardrian) spoke about a concept called **_selfish accesibility_**. 😈
+[@aardrian](https://twitter.com/aardrian) spoke about a concept called **_selfish accessibility_**. 😈
 
 It's in your best interest to make your site usable in various disabling circumstances. A broken arm, a loud cafe or bright sunlight shouldn't make your site completely unusable and if you think about these factors you'll make your site accessible.
 
