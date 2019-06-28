@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { navigateTo } from 'gatsby-link'
+import * as Sentry from '@sentry/browser';
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -58,7 +59,7 @@ const Contact = props => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title="Contact" />
-      <h1>Contact</h1>
+      <h1 onClick={() => Sentry.captureException({ type: 'ServerError', message: 'You are very cool for pressing on a header.'})}>Contact</h1>
       <form
         name="contact"
         method="post"
@@ -85,7 +86,7 @@ const Contact = props => {
           />
         </div>
         <div>
-          <Button type="submit">Send</Button>
+          <Button type="submit" onClick={() => Sentry.captureException(new Error("Contact form was sent."))}>Send</Button>
         </div>
       </form>
     </Layout>
