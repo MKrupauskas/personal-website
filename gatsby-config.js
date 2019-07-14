@@ -49,7 +49,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 800,
             },
           },
           {
@@ -88,6 +88,12 @@ module.exports = {
     },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://mkrup.com`,
+      },
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {

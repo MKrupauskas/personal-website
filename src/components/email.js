@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
-import { navigateTo } from 'gatsby-link'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
 import Button from '../components/button'
 
 import { rhythm } from '../utils/typography'
@@ -33,11 +29,9 @@ const styles = {
   },
 }
 
-const Contact = props => {
-  const { data } = props
-  const siteTitle = data.site.siteMetadata.title
-
+function Email() {
   const [fields, setFields] = useState({})
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleChange = ({ target }) => {
     setFields({ ...fields, [target.name]: target.value })
@@ -49,19 +43,25 @@ const Contact = props => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...fields }),
-    }).then(() => navigateTo('/'))
+      body: encode({ 'form-name': 'email', ...fields }),
+    }).then(() => setIsSubmitted(true))
+  }
+
+  if (isSubmitted) {
+    return <div>You've successfully signed up!</div>
   }
 
   return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO title="Contact" />
-      <h1>Contact</h1>
+    <div>
       <form
         name="contact"
         method="post"
         data-netlify="true"
         onSubmit={handleSubmit}
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+        }}
       >
         <div>
           <label style={styles.label}>Email</label>
@@ -74,30 +74,11 @@ const Contact = props => {
           />
         </div>
         <div>
-          <label style={styles.label}>Message</label>
-          <textarea
-            style={styles.textarea}
-            name="message"
-            required
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <Button type="submit">Send</Button>
+          <Button type="submit">Sign up!</Button>
         </div>
       </form>
-    </Layout>
+    </div>
   )
 }
 
-export default Contact
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+export default Email
