@@ -1,6 +1,7 @@
 ---
 title: Becoming an 18 Year Old Software Developer
 date: '2019-07-14T12:09:58.161Z'
+description: My journey in the world of software development and how I started working as a developer while still studying in high-school.
 ---
 
 Hi, I'm Mykolas, a passionate developer from Vilnius, Lithuania. I mostly work with JavaScript and React 👩‍💻⚛️. Although I don't limit myself to any single technology, I'm just in general extremely interested in software development.
