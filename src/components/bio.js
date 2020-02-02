@@ -35,7 +35,8 @@ function Bio() {
             />
             <p>
               Written by <strong>{author}</strong>. A passionate software
-              developer from Vilnius, Lithuania.
+              developer from Lithuania, currently situated in the Netherlands.
+              <em> Helping people create value with technology.</em>
             </p>
           </div>
         )
