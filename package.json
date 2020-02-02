@@ -11,8 +11,10 @@
     "@sentry/browser": "^5.4.2",
     "gatsby": "^2.3.3",
     "gatsby-image": "^2.0.35",
+    "gatsby-plugin-dark-mode": "^1.1.0",
     "gatsby-plugin-feed": "^2.1.0",
     "gatsby-plugin-google-analytics": "^2.0.18",
+    "gatsby-plugin-i18n": "^0.4.2",
     "gatsby-plugin-manifest": "^2.0.25",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.11",
@@ -29,12 +31,13 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
-    "logrocket": "^1.0.0",
     "prismjs": "^1.16.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-toggle": "^4.1.1",
     "react-typography": "^0.16.19",
+    "save": "^2.4.0",
     "typeface-merriweather": "0.0.72",
     "typeface-montserrat": "0.0.54",
     "typography": "^0.16.19",
@@ -44,11 +47,7 @@
     "prettier": "^1.16.4"
   },
   "homepage": "https://mkrup.com",
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
-  "main": "n/a",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkrupauskas/personal-website.git"
@@ -56,7 +55,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write src/**/*.{js,jsx,json,css}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""

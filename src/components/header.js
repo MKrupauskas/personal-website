@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import Toggle from './toggle'
+
 import { rhythm } from '../utils/typography'
 
 const HeaderTitle = ({ title }) => {
@@ -26,11 +28,18 @@ const HeaderTitle = ({ title }) => {
   )
 }
 
-const Header = ({ location, title }) => {
+const Header = ({ title }) => {
   return (
-    <header style={{ marginBottom: rhythm(2) }}>
-      <HeaderTitle location={location} title={title} />
+    <header
+      style={{
+        marginBottom: rhythm(2),
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}
+    >
       <nav>
+        <HeaderTitle title={title} />
         <Link style={{ boxShadow: 'none' }} to="/">
           Blog
         </Link>
@@ -43,6 +52,7 @@ const Header = ({ location, title }) => {
           Contact
         </Link>
       </nav>
+      <Toggle />
     </header>
   )
 }

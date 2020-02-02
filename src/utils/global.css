@@ -1,0 +1,18 @@
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+body.light {
+  --primary: #b58900;
+  --secondary: #d3a000;
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+body.dark {
+  --primary: #d3a000;
+  --secondary: #b58900;
+  --bg: #282c35;
+  --text: #ffffff;
+}

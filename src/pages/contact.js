@@ -18,7 +18,7 @@ const inputStyles = {
   maxWidth: 300,
   width: '100%',
   outline: 'none',
-  border: '1px solid black',
+  border: '1px solid var(--primary)',
   padding: rhythm(0.25),
 }
 

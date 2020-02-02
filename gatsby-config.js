@@ -3,7 +3,7 @@ module.exports = {
     title: `MKrup`,
     author: `Mykolas Krupauskas`,
     description: `The personal website and blog of Mykolas Krupauskas`,
-    siteUrl: `https://pedantic-galileo-18375c.netlify.com/`,
+    siteUrl: `https://mkrup.com/`,
     social: [
       {
         name: `Twitter`,
@@ -19,6 +19,7 @@ module.exports = {
       },
     ],
   },
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -100,5 +101,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    'gatsby-plugin-dark-mode',
   ],
 }
