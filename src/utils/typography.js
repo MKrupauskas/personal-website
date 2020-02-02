@@ -1,7 +1,7 @@
 import Typography from 'typography'
 import Wordpress2016 from 'typography-theme-wordpress-2016'
 
-export const BRAND_COLOR = '#b58900'
+import './global.css'
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
@@ -9,10 +9,10 @@ Wordpress2016.overrideThemeStyles = () => {
       boxShadow: `none`,
     },
     a: {
-      color: BRAND_COLOR,
+      color: 'var(--primary)',
     },
-    'a:hover,a:active': {
-      color: '#d3a000',
+    'a:hover, a:active': {
+      color: 'var(--secondary)',
     },
   }
 }

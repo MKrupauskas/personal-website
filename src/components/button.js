@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { BRAND_COLOR } from '../utils/typography'
-
 const Button = props => (
   <button
     style={{
-      border: `2px solid ${BRAND_COLOR}`,
-      color: BRAND_COLOR,
+      border: `2px solid var(--primary)`,
+      color: 'var(--primary)',
       background: 'transparent',
     }}
     {...props}
