@@ -7,7 +7,7 @@ import { rhythm } from '../utils/typography'
 
 class Layout extends React.Component {
   render() {
-    const { title, children } = this.props
+    const { title, children, isLargeHeader } = this.props
 
     return (
       <div
@@ -18,7 +18,7 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        <Header title={title} />
+        <Header title={title} isLarge={isLargeHeader} />
         <main>{children}</main>
         <Footer />
       </div>

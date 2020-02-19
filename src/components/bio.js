@@ -15,7 +15,6 @@ function Bio() {
           <div
             style={{
               display: `flex`,
-              marginBottom: rhythm(2),
             }}
           >
             <Image
@@ -25,8 +24,8 @@ function Bio() {
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
                 width: '100%',
-                height: 50,
-                maxWidth: 50,
+                height: 75,
+                maxWidth: 75,
                 borderRadius: `100%`,
               }}
               imgStyle={{

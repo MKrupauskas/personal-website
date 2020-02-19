@@ -5,13 +5,14 @@ import Toggle from './toggle'
 
 import { rhythm } from '../utils/typography'
 
-const HeaderTitle = ({ title }) => {
+const HeaderTitle = ({ title, isLarge }) => {
   return (
     <h3
       style={{
         fontFamily: `Montserrat, sans-serif`,
         marginTop: 0,
         marginBottom: 0,
+        fontSize: isLarge && '2.5rem',
       }}
     >
       <Link
@@ -28,7 +29,7 @@ const HeaderTitle = ({ title }) => {
   )
 }
 
-const Header = ({ title }) => {
+const Header = ({ title, isLarge }) => {
   return (
     <header
       style={{
@@ -39,7 +40,7 @@ const Header = ({ title }) => {
       }}
     >
       <nav>
-        <HeaderTitle title={title} />
+        <HeaderTitle title={title} isLarge={isLarge} />
         <Link style={{ boxShadow: 'none' }} to="/">
           Blog
         </Link>
