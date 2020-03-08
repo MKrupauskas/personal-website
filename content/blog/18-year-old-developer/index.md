@@ -1,5 +1,5 @@
 ---
-title: Becoming an 18 Year Old Software Developer
+title: Becoming an 18 Year Old Software Developer 🤓
 date: '2019-07-14T12:09:58.161Z'
 description: My journey in the world of software development and how I started working as a developer while still studying in high-school.
 ---
@@ -19,7 +19,6 @@ The beginner courses were great, but after a while, they weren't challenging eno
 After coming back to coding after a short break and remembering how fun and rewarding it actually is I got the sudden urge to pursue software development as a career. A lot of work and learning was ahead of me 👨‍🎓💻.
 
 ![peer programming](peer-programming.jpg)
-
 <small>Programming has always been a social activity for me. Me on the left with friends participating in a hackathon.</small>
 
 ## Starting to take it more seriously
@@ -67,7 +66,6 @@ It might not be very comfortable in the begging, new people, new tasks, a strict
 Hackathons have taught me a lot of technical skills and I got to know some great friends through them. I also have even been fortunate enough to win a couple of them. Although the essence of the event is not to win, it's to create daring projects and to meet new people.
 
 ![hackathon win](hackathon-win.jpg)
-
 <small>Me on the left, very sleep deprived, but ultimately happy after winning with an amazing team.</small>
 
 These various events, hackathons, and meetups have been so transformational in my life. If I would have been sitting at home, not participating in any social events, I would not have gotten the opportunities I got, I would not know the great people I got to know 😎🤜🤛🤓.

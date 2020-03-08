@@ -1,5 +1,5 @@
 ---
-title: Recap of YGLF 2019
+title: Recap of YGLF 2019 👨‍🏫
 date: '2019-05-18T07:38:38.151Z'
 ---
 

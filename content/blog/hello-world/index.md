@@ -1,5 +1,5 @@
 ---
-title: Hello World!
+title: Hello World! 👋
 date: '2019-05-17T07:38:38.151Z'
 description: A short introduction about me and this blog. Outlining what this blog is about and what I hope it will become sometime in the future.
 ---

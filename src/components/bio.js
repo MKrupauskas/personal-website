@@ -26,6 +26,7 @@ function Bio() {
                 width: '100%',
                 height: 75,
                 maxWidth: 75,
+                minWidth: 75,
                 borderRadius: `100%`,
               }}
               imgStyle={{

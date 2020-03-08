@@ -31,12 +31,12 @@
   height: 24px;
   padding: 0;
   border-radius: 30px;
-  background-color: #4d4d4d;
+  background-color: var(--text);
   transition: all 0.2s ease;
 }
 
 .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-  background-color: #000000;
+  background-color: #4d4d4d;
 }
 
 .react-toggle--checked .react-toggle-track {
