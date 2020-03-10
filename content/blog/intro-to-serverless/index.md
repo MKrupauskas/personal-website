@@ -1,6 +1,6 @@
 ---
 title: Intro to Serverless 🚀
-date: '2020-03-09T10:38:38.151Z'
+date: '2020-03-10T10:38:38.151Z'
 description: A technology that helps you easily, and cost-effectively  deploy server-side code that scales amazingly well.
 ---
 
@@ -9,7 +9,7 @@ Recently I had an opportunity to share a small presentation in a meetup about ba
 Firstly, I just want to say that programming is the next closest thing to having superpowers in the digital age. 🦸‍♂️ === 👨‍💻 The ability to create something useful, something that creates value to other people is pretty unmatched in my opinion.
 
 ![super power](superpower.jpg)
-<small>Moment from the meetup, programming === superpower</small>
+<small>Moment from the meetup, Google Student Developer Club Delft.</small>
 
 But just coding some application up is just part of the whole process. You must also somehow share your application with the rest of the world. Hosting your product is not a trivial task at all. There are many things you must think about if you want to provide a great experience for your customers.
 
