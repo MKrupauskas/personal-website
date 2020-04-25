@@ -5,16 +5,11 @@ import Toggle from './toggle'
 
 import { rhythm } from '../utils/typography'
 
+import './header.css'
+
 const HeaderTitle = ({ title, isLarge }) => {
   return (
-    <h3
-      style={{
-        fontFamily: `Montserrat, sans-serif`,
-        marginTop: 0,
-        marginBottom: 0,
-        fontSize: isLarge && '2.5rem',
-      }}
-    >
+    <h3 className={`logo ${isLarge ? 'logo--large' : ''}`}>
       <Link
         style={{
           boxShadow: `none`,

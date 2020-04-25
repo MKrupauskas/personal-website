@@ -1,0 +1,36 @@
+.logo {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  --bubbleSize: 2rem;
+  --bubbleHoverSize: 2.5rem;
+  --bubbleOffset: -0.75rem;
+}
+
+.logo--large {
+  font-size: 2.5rem;
+  --bubbleSize: 3rem;
+  --bubbleHoverSize: 3.5rem;
+  --bubbleOffset: -1rem;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: var(--bubbleOffset);
+  left: var(--bubbleOffset);
+  width: var(--bubbleSize);
+  height: var(--bubbleSize);
+  background: var(--primary);
+  z-index: -1;
+  border-radius: 50%;
+  transition-property: width, height;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.logo:hover::before {
+  width: var(--bubbleHoverSize);
+  height: var(--bubbleHoverSize);
+}
