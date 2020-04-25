@@ -10,6 +10,7 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     a: {
       color: 'var(--primary)',
+      transition: 'color 300ms',
     },
     'a:hover, a:active': {
       color: 'var(--secondary)',
