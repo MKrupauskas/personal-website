@@ -13,8 +13,21 @@ const styles = {
   },
 }
 
-const Moon = () => <div style={styles.icon}>🌚</div>
-const Sun = () => <div style={{ ...styles.icon, left: 0 }}>🌞</div>
+const Moon = () => (
+  <div style={styles.icon}>
+    <span role="img" aria-label="dark-mode">
+      🌚
+    </span>
+  </div>
+)
+
+const Sun = () => (
+  <div style={{ ...styles.icon, left: 0 }}>
+    <span role="img" aria-label="light-mode">
+      🌞
+    </span>
+  </div>
+)
 
 // side effect to prevent rerenders after switching pages
 let lastTheme
@@ -28,8 +41,10 @@ const Toggle = () => {
         lastTheme = theme
 
         return (
-          <label>
+          <label for="themeToggle">
             <ReactToggle
+              id="themeToggle"
+              name="themeToggle"
               checked={checked}
               icons={{
                 checked: <Moon />,

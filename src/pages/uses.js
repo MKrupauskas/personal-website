@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import { navigateTo } from 'gatsby-link'
-
+import React from 'react'
+import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Bio from '../components/bio'
 
 const Uses = props => {
   const { data } = props
