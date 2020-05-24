@@ -41,7 +41,7 @@ const Toggle = () => {
         lastTheme = theme
 
         return (
-          <label for="themeToggle">
+          <label htmlFor="themeToggle">
             <ReactToggle
               id="themeToggle"
               name="themeToggle"

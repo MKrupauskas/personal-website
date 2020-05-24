@@ -64,9 +64,12 @@ const Contact = props => {
         onSubmit={handleSubmit}
       >
         <div>
-          <label style={styles.label}>Email</label>
+          <label htmlFor="email" style={styles.label}>
+            Email
+          </label>
           <input
             style={inputStyles}
+            id="email"
             type="email"
             name="email"
             required
@@ -74,9 +77,12 @@ const Contact = props => {
           />
         </div>
         <div>
-          <label style={styles.label}>Message</label>
+          <label htmlFor="message" style={styles.label}>
+            Message
+          </label>
           <textarea
             style={styles.textarea}
+            id="message"
             name="message"
             required
             onChange={handleChange}
