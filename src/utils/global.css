@@ -29,3 +29,8 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: var(--primary);
 }
+
+::selection {
+  background: var(--secondary);
+  color: var(--text);
+}
