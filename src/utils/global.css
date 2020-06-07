@@ -53,6 +53,15 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid var(--secondary);
 }
 
+.card {
+  background: var(--accent);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin: 3rem 0 2rem;
+  position: relative;
+  z-index: 5;
+}
+
 .card::after {
   content: '';
   width: calc(100% + 1rem);
