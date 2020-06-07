@@ -62,14 +62,13 @@ const Contact = (props) => {
       <div className={isSubmitted ? 'card card-filled' : 'card'}>
         <h1 style={{ margin: '0 0 1rem 0' }}>Contact</h1>
         <p>
-          I can also be reached via social media or{' '}
+          I can also be reached via social media or by email at{' '}
           <a
             href="mailto:mkrupauskas@gmail.com"
             style={{ color: 'var(--text)' }}
           >
-            email
+            mkrupauskas@gmail.com
           </a>
-          .
         </p>
         <form
           name="contact"
