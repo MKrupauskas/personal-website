@@ -30,6 +30,7 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   background-color: var(--primary);
+  border-radius: 5px;
 }
 
 ::selection {
