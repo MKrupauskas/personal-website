@@ -8,11 +8,7 @@ import Button from '../components/button'
 
 import { rhythm } from '../utils/typography'
 
-function encode(data) {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
+import { encode } from '../helpers/helpers'
 
 const inputStyles = {
   maxWidth: 300,
@@ -20,9 +16,13 @@ const inputStyles = {
   outline: 'none',
   border: '1px solid var(--primary)',
   padding: rhythm(0.25),
+  background: 'var(--bg)',
+  color: 'var(--text)',
+  borderRadius: '0.25rem',
 }
 
-const styles = {
+export const styles = {
+  inputStyles,
   label: {
     display: 'block',
   },
@@ -33,7 +33,7 @@ const styles = {
   },
 }
 
-const Contact = props => {
+const Contact = (props) => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
 
@@ -43,7 +43,7 @@ const Contact = props => {
     setFields({ ...fields, [target.name]: target.value })
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
 
     fetch('/', {
@@ -63,7 +63,7 @@ const Contact = props => {
         data-netlify="true"
         onSubmit={handleSubmit}
       >
-        <div>
+        <div style={{ marginBottom: '1rem' }}>
           <label htmlFor="email" style={styles.label}>
             Email
           </label>
@@ -72,11 +72,12 @@ const Contact = props => {
             id="email"
             type="email"
             name="email"
+            aria-label="Email"
             required
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div style={{ marginBottom: '1rem' }}>
           <label htmlFor="message" style={styles.label}>
             Message
           </label>
@@ -84,6 +85,7 @@ const Contact = props => {
             style={styles.textarea}
             id="message"
             name="message"
+            aria-label="Message"
             required
             onChange={handleChange}
           />
