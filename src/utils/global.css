@@ -45,10 +45,46 @@ body::-webkit-scrollbar-thumb {
   padding: 0.5rem 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all 300ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 .btn:hover {
   color: var(--secondary);
   border: 1px solid var(--secondary);
+}
+
+.card::after {
+  content: '';
+  width: calc(100% + 1rem);
+  height: calc(100% + 2rem);
+  background: var(--primary);
+  border-radius: 1rem;
+  position: absolute;
+  top: -2rem;
+  right: -1rem;
+  z-index: -1;
+  transition: all 1s ease-in-out;
+  clip-path: circle(5rem at calc(100% - 5rem) 5rem);
+}
+
+.card-filled::after {
+  animation: fill 1s forwards;
+}
+
+@keyframes fill {
+  50% {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(5rem at center);
+  }
+
+  to {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(100% at center);
+  }
 }

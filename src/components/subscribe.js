@@ -30,8 +30,11 @@ function Subscribe() {
         background: 'var(--accent)',
         padding: '2rem',
         borderRadius: '1rem',
-        marginBottom: '2rem',
+        margin: '3rem 0 2rem',
+        position: 'relative',
+        zIndex: 5,
       }}
+      className={isSubmitted ? 'card-filled card' : 'card'}
     >
       <h3 style={{ margin: '0 0 0.5rem 0' }}>
         Subscribe to not miss out on new content.
@@ -46,7 +49,7 @@ function Subscribe() {
         </div>
       ) : (
         <form
-          name="contact"
+          name="email"
           method="post"
           data-netlify="true"
           onSubmit={handleSubmit}
