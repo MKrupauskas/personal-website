@@ -13,6 +13,7 @@ body.light {
   --secondary: #d3a000;
   --bg: #ffffff;
   --text: #000000;
+  --accent: #f9fafb;
 }
 
 body.dark {
@@ -20,6 +21,7 @@ body.dark {
   --secondary: #b58900;
   --bg: #282c35;
   --text: #ffffff;
+  --accent: #363c48;
 }
 
 body::-webkit-scrollbar {
@@ -33,4 +35,20 @@ body::-webkit-scrollbar-thumb {
 ::selection {
   background: var(--secondary);
   color: var(--text);
+}
+
+.btn {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: var(--bg);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.btn:hover {
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
 }

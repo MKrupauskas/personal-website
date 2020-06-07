@@ -1,14 +1,7 @@
 import React from 'react'
 
-const Button = props => (
-  <button
-    style={{
-      border: `2px solid var(--primary)`,
-      color: 'var(--primary)',
-      background: 'transparent',
-    }}
-    {...props}
-  >
+const Button = (props) => (
+  <button className="btn" {...props}>
     {props.children}
   </button>
 )
