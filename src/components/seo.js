@@ -67,6 +67,11 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: 'CERT-LT-verification',
+          content:
+            'ec629f33f02d1f173ffe4ff8a6baa754e02b601ae698a1dd2247697c30e4ec8a',
+        },
       ]
         .concat(
           keywords.length > 0
