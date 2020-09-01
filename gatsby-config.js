@@ -17,6 +17,10 @@ module.exports = {
         name: `GitHub`,
         link: `https://github.com/mkrupauskas`,
       },
+      {
+        name: `Instagram`,
+        link: `https://www.instagram.com/mkruptech`,
+      },
     ],
   },
   pathPrefix: '/',

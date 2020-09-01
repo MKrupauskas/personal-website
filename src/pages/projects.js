@@ -7,7 +7,7 @@ import Project from '../components/project'
 
 import { rhythm } from '../utils/typography'
 
-const ProjectPage = props => {
+const ProjectPage = (props) => {
   const { data } = props
   const siteTitle = data.site.siteMetadata.title
   const projects = data.allMarkdownRemark.edges

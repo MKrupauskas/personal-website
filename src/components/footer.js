@@ -7,7 +7,7 @@ import Icon from './icon'
 const Footer = () => (
   <StaticQuery
     query={footerQuery}
-    render={data => {
+    render={(data) => {
       const { author, social } = data.site.siteMetadata
 
       return (
@@ -17,9 +17,10 @@ const Footer = () => (
               display: 'flex',
               margin: 0,
               listStyle: 'none',
+              flexWrap: 'wrap',
             }}
           >
-            {social.map(item => (
+            {social.map((item) => (
               <li key={item.name} style={{ marginRight: rhythm(1 / 2) }}>
                 <a
                   target="_blank"
