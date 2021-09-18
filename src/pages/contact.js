@@ -1,36 +1,10 @@
 import React, { useState } from 'react'
 import { graphql } from 'gatsby'
-import { navigateTo } from 'gatsby-link'
-
+import { styles, inputStyles } from '../components/subscribe'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Button from '../components/button'
-
-import { rhythm } from '../utils/typography'
-
 import { encode } from '../helpers/helpers'
-
-const inputStyles = {
-  width: '100%',
-  outline: 'none',
-  border: '1px solid var(--primary)',
-  padding: rhythm(0.25),
-  background: 'var(--bg)',
-  color: 'var(--text)',
-  borderRadius: '0.25rem',
-}
-
-export const styles = {
-  inputStyles,
-  label: {
-    display: 'block',
-  },
-  textarea: {
-    ...inputStyles,
-    height: rhythm(3),
-    resize: 'none',
-  },
-}
 
 const Contact = (props) => {
   const { data } = props
@@ -58,7 +32,7 @@ const Contact = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title="Contact" />
+      <Seo title="Contact" />
       <div className={isSubmitted ? 'card card-filled' : 'card'}>
         <h1 style={{ margin: '0 0 1rem 0' }}>Contact</h1>
         <p>

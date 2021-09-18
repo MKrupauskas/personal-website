@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Project from '../components/project'
 
 import { rhythm } from '../utils/typography'
@@ -14,7 +14,7 @@ const ProjectPage = (props) => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title="Projects" />
+      <Seo title="Projects" />
       <h1>Projects</h1>
       <div style={{ marginBottom: rhythm(1) }}>
         {projects.map((project, index) => (

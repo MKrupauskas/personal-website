@@ -1,10 +1,29 @@
 import React, { useState } from 'react'
-
 import Button from '../components/button'
-
+import { rhythm } from '../utils/typography'
 import { encode } from '../helpers/helpers'
 
-import { styles } from '../pages/contact'
+export const inputStyles = {
+  width: '100%',
+  outline: 'none',
+  border: '1px solid var(--primary)',
+  padding: rhythm(0.25),
+  background: 'var(--bg)',
+  color: 'var(--text)',
+  borderRadius: '0.25rem',
+}
+
+export const styles = {
+  inputStyles,
+  label: {
+    display: 'block',
+  },
+  textarea: {
+    ...inputStyles,
+    height: rhythm(3),
+    resize: 'none',
+  },
+}
 
 function Subscribe() {
   const [fields, setFields] = useState({})

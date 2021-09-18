@@ -2,7 +2,7 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Bio from '../components/bio'
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 const Uses = props => {
   const { data } = props
@@ -10,7 +10,7 @@ const Uses = props => {
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title="Uses" />
+      <Seo title="Uses" />
       <Bio />
       <h1>Uses</h1>
       <p>A collection of most of the tools I use every day.</p>
