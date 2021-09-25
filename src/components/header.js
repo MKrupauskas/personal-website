@@ -40,6 +40,10 @@ const Header = ({ title, isLarge }) => {
           Blog
         </Link>
         {' • '}
+        <Link style={{ boxShadow: 'none' }} to="/techbits">
+          Techbits
+        </Link>
+        {' • '}
         <Link style={{ boxShadow: 'none' }} to="/projects">
           Projects
         </Link>
