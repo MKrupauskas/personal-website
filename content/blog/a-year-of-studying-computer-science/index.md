@@ -52,7 +52,7 @@ The courses were split into categories and were:
   - Web and Database Technology
   - Information and Data Management
 
-![Courses](/courses.png)
+![Courses](/images/blog/courses.png)
 
 If I had to choose a favorite course it would probably be Algorithms and Data Structures, because it was extremely challenging but it was taught well and it was rewarding to finish it.
 
@@ -86,7 +86,7 @@ Computer Organization was a fun systems course. We were taught how the hardware 
 
 This is what a part of a simple assembly program looks like:
 
-![Assembly program](/assembly.png)
+![Assembly program](/images/blog/assembly.png)
 
 Computer Networks taught us about the innovations and technology that gave us the internet 🌎! It was all about how we built amazing things just by piling layers of abstraction on top of each other. At the lowest layers, it's just electrical signals or radio waves, but we rarely think about how a high definition movie comes from a Netflix server to your phone screen. It turns out that a ton of brilliant people had to solve countless issues and problems to make that magic happen.
 

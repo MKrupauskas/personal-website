@@ -1,30 +1,30 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'next/link'
 
 import Toggle from './toggle'
 
 import { rhythm } from '../utils/typography'
+import { CONFIG } from '../config'
 
-import './header.css'
-
-const HeaderTitle = ({ title, isLarge }) => {
+const HeaderTitle = ({ isLarge }) => {
   return (
     <h3 className={`logo ${isLarge ? 'logo--large' : ''}`}>
-      <Link
-        style={{
-          boxShadow: `none`,
-          textDecoration: `none`,
-          color: `inherit`,
-        }}
-        to="/"
-      >
-        {title}
+      <Link href="/">
+        <a
+          style={{
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`,
+          }}
+        >
+          {CONFIG.title}
+        </a>
       </Link>
     </h3>
   )
 }
 
-const Header = ({ title, isLarge }) => {
+const Header = ({ isLarge }) => {
   return (
     <header
       style={{
@@ -35,21 +35,21 @@ const Header = ({ title, isLarge }) => {
       }}
     >
       <nav>
-        <HeaderTitle title={title} isLarge={isLarge} />
-        <Link style={{ boxShadow: 'none' }} to="/">
-          Blog
+        <HeaderTitle isLarge={isLarge} />
+        <Link href="/">
+          <a style={{ boxShadow: 'none' }}>Blog</a>
         </Link>
         {' • '}
-        <Link style={{ boxShadow: 'none' }} to="/techbits">
-          Techbits
+        <Link href="/techbits">
+          <a style={{ boxShadow: 'none' }}>Techbits</a>
         </Link>
         {' • '}
-        <Link style={{ boxShadow: 'none' }} to="/projects">
-          Projects
+        <Link href="/projects">
+          <a style={{ boxShadow: 'none' }}>Projects</a>
         </Link>
         {' • '}
-        <Link style={{ boxShadow: 'none' }} to="/contact">
-          Contact
+        <Link href="/contact">
+          <a style={{ boxShadow: 'none' }}>Contact</a>
         </Link>
       </nav>
       <Toggle />

@@ -1,15 +1,11 @@
-import { graphql } from 'gatsby'
 import React from 'react'
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 
-const Uses = props => {
-  const { data } = props
-  const siteTitle = data.site.siteMetadata.title
-
+const Uses = () => {
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout>
       <Seo title="Uses" />
       <Bio />
       <h1>Uses</h1>
@@ -42,13 +38,3 @@ const Uses = props => {
 }
 
 export default Uses
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

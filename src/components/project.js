@@ -1,6 +1,4 @@
 import React from 'react'
-import Image from 'gatsby-image'
-
 import { rhythm } from '../utils/typography'
 
 const styles = {
@@ -12,6 +10,10 @@ const styles = {
   image: {
     marginRight: rhythm(0.5),
     marginBottom: rhythm(0.5),
+    maxWidth: 200,
+    height: '100%',
+    objectFit: 'contain',
+    imageRendering: '-webkit-optimize-contrast',
   },
   title: {
     marginTop: 0,
@@ -27,23 +29,20 @@ const styles = {
 
 const Project = ({ project }) => (
   <div style={styles.container}>
-    <Image
-      style={styles.image}
-      fixed={project.node.frontmatter.image.childImageSharp.fixed}
-    />
+    <img style={styles.image} src={project.data.image} />
     <div style={styles.info}>
       <h3 style={styles.title}>
         <a
           style={{ boxShadow: 'none' }}
           rel="noopener noreferrer"
           target="_blank"
-          href={project.node.frontmatter.link}
+          href={project.data.link}
         >
-          {project.node.frontmatter.title}
+          {project.data.title}
         </a>
       </h3>
-      <small>Technology: {project.node.frontmatter.tech.join(', ')}</small>
-      <p style={{ marginBottom: 0 }}>{project.node.frontmatter.description}</p>
+      <small>Technology: {project.data.tech.join(', ')}</small>
+      <p style={{ marginBottom: 0 }}>{project.data.description}</p>
     </div>
   </div>
 )

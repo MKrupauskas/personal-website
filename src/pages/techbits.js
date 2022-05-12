@@ -1,17 +1,14 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
 import Techbit from '../components/techbits'
+import { TECHBITS_PATH } from '../content/constants'
+import { fetchPosts } from '../content/posts'
 import { rhythm } from '../utils/typography'
 
-const TechbitsPage = (props) => {
-  const { data } = props
-  const siteTitle = data.site.siteMetadata.title
-  const techbits = data.allMarkdownRemark.edges
-
+const TechbitsPage = ({ techbits }) => {
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout>
       <Seo title="Techbits" />
       <h1>Techbits</h1>
       <div style={{ marginBottom: rhythm(1) }}>
@@ -25,30 +22,11 @@ const TechbitsPage = (props) => {
 
 export default TechbitsPage
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(techbits)/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            description
-            tech
-          }
-        }
-      }
-    }
+export async function getStaticProps(context) {
+  const techbits = await fetchPosts(TECHBITS_PATH)
+  return {
+    props: {
+      techbits,
+    },
   }
-`
+}

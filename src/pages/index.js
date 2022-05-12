@@ -1,83 +1,59 @@
+import Link from 'next/link'
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import { rhythm } from '../utils/typography'
 import Subscribe from '../components/subscribe'
+import { BLOG_POST_PATH } from '../content/constants'
+import { fetchPosts } from '../content/posts'
+import { formatDate, formatminsToRead } from '../helpers/helpers'
+import { rhythm } from '../utils/typography'
 
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMarkdownRemark.edges
+const BlogIndex = ({ posts }) => {
+  return (
+    <Layout isLargeHeader>
+      <Seo
+        title="All posts"
+        keywords={[`blog`, `nextjs`, `javascript`, `react`]}
+      />
+      <Bio />
+      {posts.map((post) => {
+        return (
+          <div key={post.slug}>
+            <h3
+              style={{
+                marginBottom: rhythm(1 / 4),
+              }}
+            >
+              <Link href={`/blog/${post.slug}`}>
+                <a style={{ boxShadow: `none` }}>{post.data.title}</a>
+              </Link>
+            </h3>
+            <small>
+              {formatDate(new Date(post.data.date))} •{' '}
+              {formatminsToRead(post.minsToRead)} min read
+            </small>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: post.data.description,
+              }}
+            />
+          </div>
+        )
+      })}
 
-    return (
-      <Layout location={this.props.location} title={siteTitle} isLargeHeader>
-        <Seo
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-        />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>
-                {node.frontmatter.date} • {node.timeToRead} min read
-              </small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })}
-
-        <Subscribe />
-      </Layout>
-    )
-  }
+      <Subscribe />
+    </Layout>
+  )
 }
 
 export default BlogIndex
 
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/(blog)/.*.md$/" } }
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
-      edges {
-        node {
-          timeToRead
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
-        }
-      }
-    }
+export async function getStaticProps(context) {
+  const posts = await fetchPosts(BLOG_POST_PATH)
+  return {
+    props: {
+      posts,
+    },
   }
-`
+}

@@ -1,8 +1,6 @@
 import React from 'react'
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+// import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 import ReactToggle from 'react-toggle'
-
-import './toggle.css'
 
 const styles = {
   icon: {
@@ -33,30 +31,32 @@ const Sun = () => (
 let lastTheme
 
 const Toggle = () => {
-  return (
-    <ThemeToggler>
-      {({ theme, toggleTheme }) => {
-        const checked = (theme ? theme : lastTheme) === 'dark'
+  return null
 
-        lastTheme = theme
+  // return (
+  //   <ThemeToggler>
+  //     {({ theme, toggleTheme }) => {
+  //       const checked = (theme ? theme : lastTheme) === 'dark'
 
-        return (
-          <label htmlFor="themeToggle">
-            <ReactToggle
-              id="themeToggle"
-              name="themeToggle"
-              checked={checked}
-              icons={{
-                checked: <Moon />,
-                unchecked: <Sun />,
-              }}
-              onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-            />
-          </label>
-        )
-      }}
-    </ThemeToggler>
-  )
+  //       lastTheme = theme
+
+  //       return (
+  //         <label htmlFor="themeToggle">
+  //           <ReactToggle
+  //             id="themeToggle"
+  //             name="themeToggle"
+  //             checked={checked}
+  //             icons={{
+  //               checked: <Moon />,
+  //               unchecked: <Sun />,
+  //             }}
+  //             onChange={(e) => toggleTheme(e.target.checked ? 'dark' : 'light')}
+  //           />
+  //         </label>
+  //       )
+  //     }}
+  //   </ThemeToggler>
+  // )
 }
 
 export default Toggle

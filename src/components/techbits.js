@@ -1,8 +1,8 @@
 import React from 'react'
-import Image from 'gatsby-image'
 
 import { rhythm } from '../utils/typography'
-import { Link } from 'gatsby'
+import Link from 'next/link'
+import { formatDate } from '../helpers/helpers'
 
 const styles = {
   container: {
@@ -30,15 +30,15 @@ const Techbit = ({ techbit }) => (
   <div style={styles.container}>
     <div style={styles.info}>
       <h3 style={styles.title}>
-        <Link style={{ boxShadow: 'none' }} to={techbit.node.fields.slug}>
-          {techbit.node.frontmatter.title}
+        <Link href={`/techbit/${techbit.slug}`}>
+          <a style={{ boxShadow: 'none' }}>{techbit.data.title}</a>
         </Link>
       </h3>
       <small>
-        {techbit.node.frontmatter.date} •{' '}
-        {techbit.node.frontmatter.tech.join(', ')}
+        {formatDate(new Date(techbit.data.date))} •{' '}
+        {techbit.data.tech.join(', ')}
       </small>
-      <p style={{ marginBottom: 0 }}>{techbit.node.frontmatter.description}</p>
+      <p style={{ marginBottom: 0 }}>{techbit.data.description}</p>
     </div>
   </div>
 )

@@ -1,15 +1,11 @@
 import React, { useState } from 'react'
-import { graphql } from 'gatsby'
-import { styles, inputStyles } from '../components/subscribe'
+import Button from '../components/button'
 import Layout from '../components/layout'
 import Seo from '../components/seo'
-import Button from '../components/button'
+import { inputStyles, styles } from '../components/subscribe'
 import { encode } from '../helpers/helpers'
 
-const Contact = (props) => {
-  const { data } = props
-  const siteTitle = data.site.siteMetadata.title
-
+const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [fields, setFields] = useState({})
 
@@ -31,7 +27,7 @@ const Contact = (props) => {
   }
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout>
       <Seo title="Contact" />
       <div className={isSubmitted ? 'card card-filled' : 'card'}>
         <h1 style={{ margin: '0 0 1rem 0' }}>Contact</h1>
@@ -90,13 +86,3 @@ const Contact = (props) => {
 }
 
 export default Contact
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
