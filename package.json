@@ -12,7 +12,7 @@
     "@sentry/nextjs": "^6.19.7",
     "gray-matter": "^4.0.3",
     "marked": "^4.0.15",
-    "next": "^11.1.4",
+    "next": "^12.1.6",
     "next-typography": "^1.0.1",
     "prism-theme-night-owl": "^1.4.0",
     "prismjs": "^1.28.0",
