@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactToggle from 'react-toggle'
 import useDarkMode from 'use-dark-mode'
+import { useUseMounted } from '../helpers/hooks'
 
 const styles = {
   icon: {
@@ -29,6 +30,11 @@ const Sun = () => (
 
 const Toggle = () => {
   const theme = useDarkMode(false)
+  const mounted = useUseMounted()
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <label htmlFor="themeToggle">
