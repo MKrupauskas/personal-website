@@ -7,7 +7,7 @@ import { formatDate } from '../helpers/helpers'
 const styles = {
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap' as const,
     marginTop: rhythm(2),
   },
   image: {
@@ -20,7 +20,7 @@ const styles = {
   },
   info: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as const,
     flex: 1,
     minWidth: 200,
   },

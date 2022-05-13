@@ -21,7 +21,7 @@ export const styles = {
   textarea: {
     ...inputStyles,
     height: rhythm(3),
-    resize: 'none',
+    resize: 'none' as const,
   },
 }
 

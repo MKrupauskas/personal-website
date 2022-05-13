@@ -4,7 +4,7 @@ import { rhythm } from '../utils/typography'
 const styles = {
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'wrap' as const,
     marginTop: rhythm(2),
   },
   image: {
@@ -12,8 +12,8 @@ const styles = {
     marginBottom: rhythm(0.5),
     maxWidth: 200,
     height: '100%',
-    objectFit: 'contain',
-    imageRendering: '-webkit-optimize-contrast',
+    objectFit: 'contain' as const,
+    imageRendering: '-webkit-optimize-contrast' as const,
   },
   title: {
     marginTop: 0,
@@ -21,7 +21,7 @@ const styles = {
   },
   info: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'column' as const,
     flex: 1,
     minWidth: 200,
   },
@@ -29,7 +29,11 @@ const styles = {
 
 const Project = ({ project }) => (
   <div style={styles.container}>
-    <img style={styles.image} src={project.data.image} />
+    <img
+      style={styles.image}
+      src={project.data.image}
+      alt={project.data.title}
+    />
     <div style={styles.info}>
       <h3 style={styles.title}>
         <a

@@ -13,7 +13,7 @@ const Uses = () => {
       <h2>Laptop - HP ZBook Studio G5</h2>
       <ul>
         <li>CPU: Intel® Core™ i7-8750H</li>
-        <li>Display: 15.6" (16:9) 1920 x 1080 pixels</li>
+        <li>Display: 15.6&quot; (16:9) 1920 x 1080 pixels</li>
         <li>Graphics: NVIDIA Quadro P1000 4 GB GDDR5</li>
         <li>Memory: 16 GB (1 x 16 GB)</li>
         <li>Storage: 512 GB SSD</li>

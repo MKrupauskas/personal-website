@@ -5,7 +5,7 @@ import useDarkMode from 'use-dark-mode'
 const styles = {
   icon: {
     fontSize: 14,
-    position: 'absolute',
+    position: 'absolute' as const,
     top: 5,
     right: 0,
   },
