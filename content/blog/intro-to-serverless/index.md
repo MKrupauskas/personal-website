@@ -8,7 +8,7 @@ Recently I had an opportunity to share a small presentation in a meetup about ba
 
 Firstly, I just want to say that programming is the next closest thing to having superpowers in the digital age. 🦸‍♂️ === 👨‍💻 The ability to create something useful, something that creates value to other people is pretty unmatched in my opinion.
 
-![super power](superpower.jpg)
+![super power](/images/blog/superpower.jpg)
 <small>Moment from the meetup, Google Student Developer Club Delft.</small>
 
 But just coding some application up is just part of the whole process. You must also somehow share your application with the rest of the world. Hosting your product is not a trivial task at all. There are many things you must think about if you want to provide a great experience for your customers.
@@ -84,7 +84,7 @@ This is just an added benefit of using serverless. Especially useful for solo de
 Serverless can also be explained as a service that lets you run functions in response to some event. The general structure of a _cloud function_ (written in Node.js) looks like this.
 
 ```js
-exports.myCloudFunction = function(event, context, callback) {
+exports.myCloudFunction = function (event, context, callback) {
   // computation happens here
 
   callback('error', result)

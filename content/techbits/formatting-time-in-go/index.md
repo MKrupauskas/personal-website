@@ -13,9 +13,9 @@ Add the library to your project with the command below.
 go install github.com/dustin/go-humanize
 ```
 
-Use the library by passing a time instace to the `humanize.Time` function. The output will be a nicely formatted date string in the form of `7 years/months/weeks/days/minutes/seconds ago`. See the example snippet below to learn about the usage.
+Use the library by passing a time instace to the `humanize.Time` function. The output will be a nicely formatted date string in the form of `7 {unit} ago`. See the example snippet below to learn about the usage.
 
-```go
+```js
 package main
 
 import (

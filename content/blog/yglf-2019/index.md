@@ -1,6 +1,7 @@
 ---
 title: Recap of YGLF 2019 👨‍🏫
 date: '2019-05-18T07:38:38.151Z'
+description: 'Recently I attended the first frontend conference in Vilnius. You Gotta Love Frontend was an action-packed and an extremely informative…'
 ---
 
 Recently I attended the first frontend conference in Vilnius.

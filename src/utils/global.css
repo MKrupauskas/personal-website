@@ -8,7 +8,7 @@ body {
   color: var(--text);
 }
 
-body.light {
+body.light-mode {
   --primary: #b58900;
   --secondary: #d3a000;
   --bg: #ffffff;
@@ -16,7 +16,7 @@ body.light {
   --accent: #f9fafb;
 }
 
-body.dark {
+body.dark-mode {
   --primary: #d3a000;
   --secondary: #b58900;
   --bg: #282c35;
