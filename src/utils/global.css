@@ -38,6 +38,10 @@ body::-webkit-scrollbar-thumb {
   color: var(--text);
 }
 
+blockquote {
+  color: var(--text);
+}
+
 .btn {
   border: 1px solid var(--primary);
   color: var(--primary);
